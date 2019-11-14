@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
+  <div class="ion-text-center">
     <ion-title>
       Grocery Inventory
     </ion-title>
+  </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+ <ion-item-sliding>
+  <ion-item>
+    Chicken
+  </ion-item>
+  <ion-item-options side="left" (ionSwipe)="saveItem(item)">
+    <button ion-button expandable (click)="saveItem(item)">
+      <ion-icon name="star"></ion-icon>
+    </button>
+  </ion-item-options>
+</ion-item-sliding>
+  </ion-content>
